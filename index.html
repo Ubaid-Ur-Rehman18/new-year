@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown to 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            animation: backgroundShift 25s infinite alternate; /* Changed to 25s for much slower duration */
+        }
+
+        @keyframes backgroundShift {
+            0% {
+                background-color: #FF1493; /* Deep pink */
+            }
+            4% {
+                background-color: #8A2BE2; /* Blue violet */
+            }
+            8% {
+                background-color: #00FFFF; /* Cyan */
+            }
+            12% {
+                background-color: #FF4500; /* Orange red */
+            }
+            16% {
+                background-color: #32CD32; /* Lime green */
+            }
+            20% {
+                background-color: #FFD700; /* Gold */
+            }
+            24% {
+                background-color: #FF6347; /* Tomato */
+            }
+            28% {
+                background-color: #00FA9A; /* Medium spring green */
+            }
+            32% {
+                background-color: #FF69B4; /* Hot pink */
+            }
+            36% {
+                background-color: #DA70D6; /* Orchid */
+            }
+            40% {
+                background-color: #9400D3; /* Dark violet */
+            }
+            44% {
+                background-color: #20B2AA; /* Light sea green */
+            }
+            48% {
+                background-color: #FF1493; /* Deep pink */
+            }
+            52% {
+                background-color: #8A2BE2; /* Blue violet */
+            }
+            56% {
+                background-color: #00FFFF; /* Cyan */
+            }
+            60% {
+                background-color: #FF4500; /* Orange red */
+            }
+            64% {
+                background-color: #32CD32; /* Lime green */
+            }
+            68% {
+                background-color: #FFD700; /* Gold */
+            }
+            72% {
+                background-color: #FF6347; /* Tomato */
+            }
+            76% {
+                background-color: #00FA9A; /* Medium spring green */
+            }
+            80% {
+                background-color: #FF69B4; /* Hot pink */
+            }
+            84% {
+                background-color: #DA70D6; /* Orchid */
+            }
+            88% {
+                background-color: #9400D3; /* Dark violet */
+            }
+            92% {
+                background-color: #20B2AA; /* Light sea green */
+            }
+            100% {
+                background-color: #FF1493; /* Deep pink */
+            }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 80%;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 4px;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .countdown {
+            font-size: 6rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .countdown div {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .countdown div:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .time-unit {
+            font-size: 2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #ff9f00;
+        }
+
+        .time {
+            font-size: 5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 3px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .countdown {
+                font-size: 4rem;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .countdown div {
+                padding: 15px;
+            }
+
+            .time {
+                font-size: 4rem;
+            }
+
+            .time-unit {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .countdown {
+                font-size: 3rem;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .time {
+                font-size: 3.5rem;
+            }
+
+            .time-unit {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown to New Year 2025</h1>
+        <div class="countdown" id="countdown">
+            <div>
+                <div class="time" id="days"></div>
+                <div class="time-unit">Days</div>
+            </div>
+            <div>
+                <div class="time" id="hours"></div>
+                <div class="time-unit">Hours</div>
+            </div>
+            <div>
+                <div class="time" id="minutes"></div>
+                <div class="time-unit">Minutes</div>
+            </div>
+            <div>
+                <div class="time" id="seconds"></div>
+                <div class="time-unit">Seconds</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

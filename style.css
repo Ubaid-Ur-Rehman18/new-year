@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: white;
+}
+
+.container {
+    perspective: 1000px; /* Create 3D space */
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f9c74f;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transform-style: preserve-3d;
+    animation: rotateText 3s infinite alternate, bounce 1s infinite alternate;
+}
+
+h1::before {
+    content: "Happy New Year 2025!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    color: #ff9900;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+    transform: rotateX(25deg) rotateY(15deg) translateZ(-50px);
+}
+
+@keyframes rotateText {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-25px);
+    }
+}
